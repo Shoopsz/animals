@@ -1,0 +1,28 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Elephant extends Animal {
+    int bananas;
+    boolean bathed;
+    Scanner sc = new Scanner(System.in);
+    Elephant () {
+        weight = (int) random(3000, 7000);
+        height = (int) random(200, 400);
+        age = (int) random(1, 70);
+        name = sc.nextLine();
+        System.out.println("Your now own a elephant with the name " + name);
+
+    }
+    public boolean bath(){
+        if (bathed == true){
+            bathed = false;
+        }
+        return bathed;
+    }
+    public int moreBananas(){
+        bananas = rand.nextInt(100);
+        bananas +=1;
+        return bananas;
+    }
+}
