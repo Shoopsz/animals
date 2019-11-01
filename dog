@@ -1,0 +1,29 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Dog extends Animal{
+    boolean chewToy = true;
+    int dogFood = 0;
+    Scanner sc = new Scanner(System.in);
+    Dog (){
+        weight = (int) random(1, 35);
+        height = (int) random(30, 100);
+        age = (int) random(1, 15);
+        System.out.println("");
+        name = sc.nextLine();
+        System.out.println("Your now own a dog with the name " + name);
+
+    }
+    public void newChewToy() {
+        if (chewToy == false){
+            chewToy = true;
+        }
+    }
+
+    int moreDogFood() {
+        dogFood = rand.nextInt(50);
+        dogFood +=1;
+        return dogFood;
+    }
+}
