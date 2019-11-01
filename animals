@@ -1,2 +1,65 @@
+package com.company;
 
-hej
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Hub {
+    //List<Animal> arrayListAnimal;
+    Animal [] rAnimal = new Animal[3];
+    ArrayList<Animal> arrayListAnimal = new ArrayList<Animal>();
+
+
+    Scanner sc = new Scanner(System.in);
+    int menu = 0;
+
+    public Hub() {
+        System.out.println("System Online");
+        mainmenu();
+
+    }
+    public void mainmenu() {
+        System.out.println("Animals Creator\n[1]Create a new animal\n[2]Advance days\n[3]Exit");
+        menu = sc.nextInt();
+
+        switch (menu) {
+            case 1:
+                int newRandAnimal = (int) (Math.random() * 3) + 1;
+
+                if (newRandAnimal == 2) {
+                    System.out.println("You have adopted a new dog, give it a name!");
+                    arrayListAnimal.add(new Dog());
+
+                }
+                if (newRandAnimal == 1) {
+                    System.out.println("You have adopted an new elephant, give it a name!");
+
+                    arrayListAnimal.add(new Elephant());
+
+                }
+                if (newRandAnimal == 3) {
+                    System.out.println("You have adopted a new parrot, give it a name!");
+
+                    arrayListAnimal.add(new Parrot());
+
+                }
+
+                mainmenu();
+            case 2:
+                days(1);
+                System.out.println("How many days will you be away?");
+                if ( sc.nextInt() == 1)
+                    System.out.println("hej");
+                else if (sc.nextInt()>= 2 && sc.nextInt() <= 9999 )
+                System.out.println("");
+
+                mainmenu();
+            case 3:
+
+                break;
+        }
+    }
+    public void days(int day){
+
+
+    }
+}
