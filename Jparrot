@@ -1,0 +1,44 @@
+package createAnimal;
+
+public class Parrot extends Animal {
+	int seeds;
+	int maxAge = 95;
+	boolean flying;
+
+	public Parrot() {
+	}
+
+	// initiate value for elephants object
+	public Parrot(String sound, String name, double weight, double height, int age, int eat) {
+		this.setName(name);
+		this.setSound(sound);
+		this.setWeight(weight);
+		this.setHeight(height);
+		this.setAge(age);
+		this.setEat(eat);
+	}
+
+	// set the state of flying, to true if flying is false respective false while
+	// not flying
+	boolean fly() {
+		if (flying == false)
+			return true;
+		return false;
+
+	}
+
+	// set the state of flying, to false if flying is true respective false while
+	// not flying
+	boolean land() {
+		if (flying == true)
+			return false;
+		return true;
+
+	}
+
+	// random amount of seeds and add old value of seeds to new value of seeds if the method call again
+	public int moreSeeds() {
+		return seeds += (int) (Math.random() * 30 + 1);
+	}
+
+}
