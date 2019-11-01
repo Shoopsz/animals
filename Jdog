@@ -1,0 +1,33 @@
+package createAnimal;
+
+public class Dog extends Animal {
+
+	// amount of dogs food, dog chews toy.
+	int dogFood;
+	int maxAge = 15;
+	boolean chewToy;
+
+	public Dog() {
+	}
+
+	// weight, height, age and eat needed so a dog object can be create.
+	public Dog(String sound, String name, double weight, double height, int age, int eat) {
+		this.setSound(sound);
+		this.setName(name);
+		this.setWeight(weight);
+		this.setHeight(height);
+		this.setAge(age);
+		this.setEat(eat);
+	}
+
+	boolean newChewToy() {
+		if (chewToy == false)
+			return true;
+		return false;
+
+	}
+	// random amount of bananas and add old value of bananas to new value of bananas if the method call again
+	public int moreDogFood() {
+		return dogFood += (int) (Math.random() * 50 + 1);
+	}
+}
