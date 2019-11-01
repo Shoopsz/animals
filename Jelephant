@@ -1,0 +1,34 @@
+package createAnimal;
+
+public class Elephant extends Animal {
+	int bananas;
+	int maxAge = 70;
+	boolean bathed;
+
+	// initiate value for elephants object
+	public Elephant(String sound, String name, double weight, double height, int age, int eat) {
+		this.setName(name);
+		this.setSound(sound);
+		this.setWeight(weight);
+		this.setHeight(height);
+		this.setAge(age);
+		this.setEat(eat);
+	}
+
+	public Elephant() {
+	}
+
+	// set the state of bath, to true or false
+	boolean bath() {
+		if (bathed == false)
+			return true;
+		return false;
+
+	}
+
+	// random amount of bananas and add old value of bananas to new value of bananas if the method call again
+	public int moreBananas() {
+		return bananas += (int) (Math.random() * 100 + 1);
+
+	}
+}
