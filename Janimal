@@ -1,0 +1,80 @@
+package createAnimal;
+
+import java.util.List;
+
+public class Animal{
+	// set field to private. Protect from invalid change
+	// Only allow to change field value through get and set.
+	private String sound;
+	private String name;
+	private double weight;
+	private double height;
+	private int age;
+	private int eat;
+
+	public Animal() {
+	}
+
+	public String getSound() {
+		return sound;
+	}
+
+	public void setSound(String sound) {
+		this.sound = sound;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getWeight() {
+		return weight;
+	}
+
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	public void setHeight(double height) {
+		this.height = height;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public int getEat() {
+		return eat;
+	}
+
+	public void setEat(int eat) {
+		this.eat = eat;
+	}
+
+	public String makeSound(String animalSound) {
+
+		return animalSound;
+	}
+
+	// Print out animals information
+	public void printValues(List<Animal> animalList) {
+		int cage = 1;
+		for (Animal animal : animalList) {
+			System.out.println("Cage: " + (cage++) + " Type: " + animal.sound + " Name: " + animal.name + " Age: "
+					+ animal.age + " year old" + " Height: " + animal.height + "m" + " Weight: " + animal.weight + "kg"
+					+ "\n");
+		}
+	}
+}
